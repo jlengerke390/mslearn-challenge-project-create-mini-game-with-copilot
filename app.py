@@ -1,10 +1,13 @@
+import random
 print("This is Scissor, Rock, Paper Game")
+
+oponent = ["scissor", "rock", "paper"]
 
 while True:
     print("Player 1: choose one of the following: scissor, rock, paper")
     player1 = input("1. scissor\n2. rock\n3. paper\n > ").lower()
-    print("Player 2: choose one of the following: scissor, rock, paper")
-    player2 = input("1. scissor\n2. rock\n3. paper\n > ").lower()
+    player2 = random.choice(oponent)
+    print(f"Player 2 chosed {player2}")
 
     if player1 == "scissor" and player2 == "rock":
         print("Player 2 wins")
